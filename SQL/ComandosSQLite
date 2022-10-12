@@ -1,0 +1,143 @@
+--> ** SELECT: **
+
+-->> select * from aluno;
+
+  -- select nome, cpf from aluno;
+  -- select * from professor;
+  -- select * from aulas;
+
+-->> Select campos especificos:
+
+  -- select materia,cpf, nome from professor;
+
+-->> Select com Where;
+
+  -- select cpf from professor where nome = 'Mayk Brito'
+  -- select * from aluno where matricula = 1;
+  -- SELECT * FROM aluno WHERE nome LIKE 'j%';
+  -- SELECT * FROM aluno WHERE nome LIKE '%G%';
+     SELECT matricula, cpf FROM aluno WHERE nome LIKE '%G%' ;
+
+
+--> ** OPERADORES RELACIONAIS: **
+
+-->> = (so funciona number)
+
+  -- select * from aluno where cpf = 45678945645;
+  -- select * from aluno where matricula = 3;
+
+-->> like (mesma funcao do =, mas funciona com textos)
+
+-- 	select * from aluno where nome like 'João Castro';
+-- 	select * from aluno where responsavel like 'josefina gracielly';
+-- Like tambem busca sem, saber conteudo completo do Texto:
+-- 	select * from aluno where responsavel like 'josefina%';
+--     select * from aluno where responsavel like 'M%';
+-- 	   select * from aluno where responsavel like '%G%';
+-- 	   select * from aluno where responsavel like '%a';
+
+
+-->> ** OPERADORES MATEMÁTICOS: **
+
+-->> + Adição
+-- select * from aluno where matricula = 1 + 1;
+
+-->> - Subtração
+-- select * from aluno where matricula = 2 - 1;
+
+-->> + Multiplicação
+-- select * from aluno where matricula = 1.5 * 2;
+
+-->> / Divisao
+--  select * from aluno where matricula = 2 / 2;
+ 
+-->> % Módulo (Resto da divisão)
+-- select * from aluno where matricula = 4 % 2; -- modulo == 0
+-- select * from aluno where matricula = 4 % 3; -- modulo == 1
+-- select * from aluno where matricula = 8 % 5; -- modulo == 3
+
+
+-- >** OPERADORES LOGICOS: **
+
+-->> AND:
+-- select * from aluno where nome like 'j%' AND matricula < 2;
+-- select * from aluno where nome like 'j%' AND matricula > 2;
+
+-->> OR:
+-- select * from aluno where matricula > 1 OR nome like 'j%';
+-- select * from aluno where matricula > 2 OR nome like 'G%';
+
+
+-->> BETWEEN
+
+-- select * from funcionarios 
+-- where id_funcionario BETWEEN 4 AND 7; 
+
+-- select * from funcionarios 
+-- where id_funcionario NOT BETWEEN 4 AND 7; 
+
+
+-->> IN e NOT IN
+
+-- select * from funcionarios 
+-- where id_departamento IN (1, 3, 5)
+
+-- select * from funcionarios 
+-- where id_departamento NOT IN (1, 3, 5)
+
+
+-->> IS NULL e IS NOT NULL
+
+-- select * from funcionarios
+-- where id_departamento IS null;
+
+-- select * from funcionarios
+-- where id_departamento IS NOT null;
+
+
+
+-- INSERT INTO;
+
+-- insert into aluno(
+-- 	nome,
+--   	cpf,
+--   	responsavel
+-- ) values(
+-- 	'Carlos albert',
+--      12244499,
+--   	'Maria albert'
+-- );
+
+-- select * from aluno
+
+
+
+-- UPDATE: (Use WHERE!!)
+
+-- update aluno set nome = 'Mariano Soares', responsavel = 'Marcios Soares V'
+-- where matricula = 2;
+
+-- update aluno set nome = 'Mariano Garcia', responsavel = 'Marcio Garcia', cpf = 123456
+-- where matricula = 2;
+
+-- select * from aluno;
+
+
+
+-- DELETE (use WHERE!!)
+
+-- apaga todo campo -> "registro"
+
+
+-- delete from aluno where matricula = 4;
+
+-- select * from aluno;
+
+
+
+
+
+
+
+
+

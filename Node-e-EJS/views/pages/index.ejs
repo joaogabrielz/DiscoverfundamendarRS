@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+<%- include('../partials/head'); %>
+
+ <body class="container">
+
+  <%- include('../partials/header' ); %>
+
+  <main>
+    <div class="jumbotron">
+      <h1>Node + EJS</h1>
+      <h4>Bem vindo!</h4>
+      <p>Vamos aprender a trabalhar com arquivos EJS</p>
+      <h5>O que é EJS? </h5>
+      <p> <%= subtitle %> </p>
+    </div>
+    <ul>
+      <% qualitys.forEach(function(quality){ %>
+
+        <li>
+          <strong> <%= quality.title %> </strong> <%= quality.message %>
+        </li>
+        
+      <% }) %>
+
+      <!-- <li>
+        <strong>D </strong> escritao com D
+      </li> -->   
+    </ul>
+  </main>
+
+  <%- include('../partials/footer'); %>
+  
+ </body>
+ </html>
